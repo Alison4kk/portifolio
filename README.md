@@ -3,8 +3,7 @@
 Este é o projeto do meu portfólio pessoal.
 
 Hospedado no GitHub Pages:
-
-https://github.com/Alison4kk/portifolio
+https://alison4kk.github.io/portifolio/
 
 ## Stack
 
