@@ -10,9 +10,9 @@
       <h3 class="text-center text-4xl font-extrabold mb-10 text-slate-900 dark:text-slate-50 transition-colors duration-300">Sobre Mim</h3>
       <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed text-center transition-colors duration-300">
         Desenvolvedor Full Stack Pleno com mais de 3 anos de experiência na criação de soluções
-        escaláveis. Atualmente na Área Central, foco no ecossistema PHP e JavaScript, atuando
-        desde a análise até o deploy. Graduando em Sistemas de Informação pela Unidavi, combino
-        paixão por código limpo e afinidade em infraestrutura AWS e Linux.
+        escaláveis. Foco no ecossistema PHP e JavaScript, atuando
+        desde a análise até o deploy. Graduado em Sistemas de Informação pela UNIDAVI, combino
+        paixão por código limpo e engenharia de requisitos para construir projetos sólidos.
       </p>
     </div>
   </section>

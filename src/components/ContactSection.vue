@@ -20,34 +20,31 @@ const currentYear = computed(() => new Date().getFullYear());
             </div>
             <span class="text-lg opacity-80 dark:opacity-90">alison117gh@gmail.com</span>
           </div>
-
-          <!-- WhatsApp -->
-          <div class="flex items-center gap-5">
-            <div class="w-12 h-12 bg-white/10 dark:bg-white/20 rounded-2xl flex items-center justify-center text-blue-400 dark:text-blue-300 transition-colors duration-300">
-              <i class="fab fa-whatsapp"></i>
-            </div>
-            <span class="text-lg opacity-80 dark:opacity-90">(47) 99104-5272</span>
-          </div>
-
+          
           <!-- Redes Sociais -->
-          <div class="flex items-center gap-5 pt-6">
-            <a
-              href="https://www.linkedin.com/in/alison-antonio-loffi/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-12 h-12 bg-white/10 dark:bg-white/20 rounded-2xl flex items-center justify-center text-blue-400 dark:text-blue-300 hover:bg-white/20 dark:hover:bg-white/30 hover:text-blue-300 dark:hover:text-blue-200 transition-all duration-300"
-            >
-              <i class="fab fa-linkedin-in text-lg"></i>
-            </a>
-            <a
-              href="https://github.com/Alison4kk"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-12 h-12 bg-white/10 dark:bg-white/20 rounded-2xl flex items-center justify-center text-blue-400 dark:text-blue-300 hover:bg-white/20 dark:hover:bg-white/30 hover:text-blue-300 dark:hover:text-blue-200 transition-all duration-300"
-            >
-              <i class="fab fa-github text-lg"></i>
-            </a>
-          </div>
+          <a
+            href="https://www.linkedin.com/in/alison-antonio-loffi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-5 group"
+          >
+            <div class="w-12 h-12 bg-white/10 dark:bg-white/20 rounded-2xl flex items-center justify-center text-blue-400 dark:text-blue-300 group-hover:bg-white/20 dark:group-hover:bg-white/30 group-hover:text-blue-300 dark:group-hover:text-blue-200 transition-all duration-300">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <span class="text-lg opacity-80 dark:opacity-90 group-hover:text-blue-200 transition-colors duration-300">LinkedIn</span>
+          </a>
+
+          <a
+            href="https://github.com/Alison4kk"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-5 group"
+          >
+            <div class="w-12 h-12 bg-white/10 dark:bg-white/20 rounded-2xl flex items-center justify-center text-blue-400 dark:text-blue-300 group-hover:bg-white/20 dark:group-hover:bg-white/30 group-hover:text-blue-300 dark:group-hover:text-blue-200 transition-all duration-300">
+              <i class="fab fa-github"></i>
+            </div>
+            <span class="text-lg opacity-80 dark:opacity-90 group-hover:text-blue-200 transition-colors duration-300">GitHub</span>
+          </a>
         </div>
       </div>
 

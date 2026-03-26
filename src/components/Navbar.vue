@@ -48,8 +48,7 @@ const links = [
       </div>
 
       <!-- Mobile Menu Toggle -->
-      <div class="md:hidden h-20 flex items-center justify-between">
-        <div class="text-lg font-bold text-slate-700 dark:text-slate-300">Portfolio</div>
+      <div class="md:hidden h-20 flex items-center justify-end">
         <div class="flex items-center gap-2">
           <!-- Theme Toggle Mobile -->
           <button
