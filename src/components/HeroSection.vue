@@ -17,7 +17,7 @@ const scrollToSection = (sectionId) => {
         <div class="relative w-56 h-56 md:w-80 md:h-80 rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-900 border-4 border-white dark:border-slate-800 transition-colors duration-300">
           <img
             src="/src/assets/foto.jpeg"
-            alt="Álison Antonio Loffi"
+            alt="Alison Antonio Loffi"
             class="w-full h-full object-cover"
           />
         </div>
@@ -26,7 +26,7 @@ const scrollToSection = (sectionId) => {
       <!-- Conteúdo textual -->
       <div class="text-center md:text-left flex-1" data-aos="fade-left">
         <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 dark:text-slate-50 mb-6 leading-tight transition-colors duration-300">
-          Olá, eu sou o <span class="text-gradient">Álison.</span>
+          Olá, eu sou o <span class="text-gradient">Alison.</span>
         </h1>
         <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-8 font-medium transition-colors duration-300">
           Desenvolvedor Full Stack Pleno
