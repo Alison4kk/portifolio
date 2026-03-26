@@ -5,28 +5,28 @@ const currentYear = computed(() => new Date().getFullYear());
 </script>
 
 <template>
-  <section id="contato" class="py-24 px-6 bg-slate-900 text-white rounded-t-[50px] md:rounded-t-[100px]">
+  <section id="contato" class="py-24 px-6 bg-slate-900 dark:bg-slate-800 text-white rounded-t-[50px] md:rounded-t-[100px] transition-colors duration-300">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
       <!-- Seção esquerda - Texto -->
       <div data-aos="fade-right">
         <h2 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
-          Vamos trabalhar <span class="text-blue-400">juntos?</span>
+          Vamos trabalhar <span class="text-blue-400 dark:text-blue-300">juntos?</span>
         </h2>
         <div class="space-y-6">
           <!-- Email -->
           <div class="flex items-center gap-5">
-            <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-blue-400">
+            <div class="w-12 h-12 bg-white/10 dark:bg-white/20 rounded-2xl flex items-center justify-center text-blue-400 dark:text-blue-300 transition-colors duration-300">
               <i class="fas fa-envelope"></i>
             </div>
-            <span class="text-lg opacity-80">alison117gh@gmail.com</span>
+            <span class="text-lg opacity-80 dark:opacity-90">alison117gh@gmail.com</span>
           </div>
 
           <!-- WhatsApp -->
           <div class="flex items-center gap-5">
-            <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-blue-400">
+            <div class="w-12 h-12 bg-white/10 dark:bg-white/20 rounded-2xl flex items-center justify-center text-blue-400 dark:text-blue-300 transition-colors duration-300">
               <i class="fab fa-whatsapp"></i>
             </div>
-            <span class="text-lg opacity-80">(47) 99104-5272</span>
+            <span class="text-lg opacity-80 dark:opacity-90">(47) 99104-5272</span>
           </div>
 
           <!-- Redes Sociais -->
@@ -35,7 +35,7 @@ const currentYear = computed(() => new Date().getFullYear());
               href="https://www.linkedin.com/in/alison-antonio-loffi/"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-blue-400 hover:bg-white/20 hover:text-blue-300 transition-all"
+              class="w-12 h-12 bg-white/10 dark:bg-white/20 rounded-2xl flex items-center justify-center text-blue-400 dark:text-blue-300 hover:bg-white/20 dark:hover:bg-white/30 hover:text-blue-300 dark:hover:text-blue-200 transition-all duration-300"
             >
               <i class="fab fa-linkedin-in text-lg"></i>
             </a>
@@ -43,7 +43,7 @@ const currentYear = computed(() => new Date().getFullYear());
               href="https://github.com/Alison4kk"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-blue-400 hover:bg-white/20 hover:text-blue-300 transition-all"
+              class="w-12 h-12 bg-white/10 dark:bg-white/20 rounded-2xl flex items-center justify-center text-blue-400 dark:text-blue-300 hover:bg-white/20 dark:hover:bg-white/30 hover:text-blue-300 dark:hover:text-blue-200 transition-all duration-300"
             >
               <i class="fab fa-github text-lg"></i>
             </a>
@@ -52,7 +52,7 @@ const currentYear = computed(() => new Date().getFullYear());
       </div>
 
       <!-- Seção direita - Ícone de Código Animado -->
-      <div class="flex items-center justify-center h-full" data-aos="fade-left">
+      <div class="hidden md:flex items-center justify-center h-full" data-aos="fade-left">
         <div class="code-icon-container">
           <i class="fas fa-code" style="font-size: 180px;"></i>
         </div>
@@ -60,7 +60,7 @@ const currentYear = computed(() => new Date().getFullYear());
     </div>
 
     <!-- Footer -->
-    <footer class="mt-24 pt-8 border-t border-white/10 text-center text-white/40 text-sm">
+    <footer class="mt-24 pt-8 border-t border-white/10 dark:border-white/20 text-center text-white/40 dark:text-white/50 text-sm transition-colors duration-300">
       &copy; {{ currentYear }} Álison Antonio Loffi | Ituporanga, SC
     </footer>
   </section>

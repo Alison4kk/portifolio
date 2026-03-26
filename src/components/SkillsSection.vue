@@ -17,42 +17,36 @@ const skills = [
     icon: 'fab fa-php',
     name: 'PHP',
     color: '#777BB4',
-    delay: 0,
   },
   {
     id: 2,
     icon: 'fab fa-laravel',
     name: 'Laravel',
     color: '#FF2D20',
-    delay: 100,
   },
   {
     id: 3,
     icon: 'fab fa-vuejs',
     name: 'Vue.js',
     color: '#42b883',
-    delay: 200,
   },
   {
     id: 4,
     icon: 'fab fa-js',
     name: 'TS / JS',
     color: '#f7df1e',
-    delay: 300,
   },
   {
     id: 5,
     icon: 'fab fa-node',
     name: 'Node.js',
     color: '#339933',
-    delay: 400,
   },
   {
     id: 6,
     icon: 'fab fa-sass',
     name: 'CSS / SASS',
     color: '#CC6699',
-    delay: 500,
   },
   {
     id: 7,
@@ -60,7 +54,6 @@ const skills = [
     svg: alpineSvg,
     name: 'Alpine.js',
     color: '#77C1D3',
-    delay: 600,
   },
   {
     id: 8,
@@ -68,59 +61,53 @@ const skills = [
     svg: livewireSvg,
     name: 'Livewire / Volt',
     color: '#FB70A9',
-    delay: 700,
   },
   {
     id: 9,
     icon: 'fab fa-docker',
     name: 'Docker',
     color: '#2496ED',
-    delay: 800,
   },
   {
     id: 10,
     icon: 'fas fa-database',
     name: 'MySQL',
     color: '#00758F',
-    delay: 900,
   },
   {
     id: 11,
     icon: 'fab fa-aws',
     name: 'AWS',
     color: '#FF9900',
-    delay: 1000,
   },
   {
     id: 12,
     icon: 'fab fa-linux',
     name: 'Linux',
     color: '#000000',
-    delay: 1100,
   },
 ];
 </script>
 
 <template>
-  <section id="habilidades" class="py-24 px-6 bg-slate-50">
+  <section id="habilidades" class="py-24 px-6 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-center text-blue-600 font-bold uppercase tracking-[0.2em] text-sm mb-4">
+      <h2 class="text-center text-blue-600 dark:text-blue-400 font-bold uppercase tracking-[0.2em] text-sm mb-4 transition-colors duration-300">
         Competências
       </h2>
-      <h3 class="text-center text-4xl font-extrabold mb-16 text-slate-900">Minha Stack</h3>
+      <h3 class="text-center text-4xl font-extrabold mb-16 text-slate-900 dark:text-slate-50 transition-colors duration-300">Minha Stack</h3>
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         <div
           v-for="skill in skills"
           :key="skill.id"
           :data-aos="'zoom-in'"
-          :data-aos-delay="skill.delay"
-          class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center hover:shadow-xl hover:-translate-y-2 transition-all group cursor-default"
+          class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col items-center hover:shadow-xl dark:hover:shadow-slate-800 hover:-translate-y-2 transition-all group cursor-default"
         >
-          <div v-if="skill.icon === 'svg'" class="text-5xl text-blue-400 group-hover:transition-colors mb-4 svg-icon" :style="{ '--hover-color': skill.color }" v-html="skill.svg"></div>
-          <i v-else :class="skill.icon" class="text-5xl text-blue-400 group-hover:transition-colors mb-4"
+          <div v-if="skill.icon === 'svg'" class="text-5xl text-blue-400 dark:text-blue-500 group-hover:transition-colors mb-4 svg-icon" :style="{ '--hover-color': skill.color }" v-html="skill.svg"></div>
+          <i v-else :class="skill.icon" class="text-5xl text-blue-400 dark:text-blue-500 group-hover:transition-colors mb-4"
             :style="{ '--hover-color': skill.color }"
           ></i>
-          <span class="font-bold text-slate-700">{{ skill.name }}</span>
+          <span class="font-bold text-slate-700 dark:text-slate-300 transition-colors duration-300">{{ skill.name }}</span>
         </div>
       </div>
     </div>

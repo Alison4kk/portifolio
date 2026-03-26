@@ -1,9 +1,8 @@
 <script setup>
 import { defineProps, defineEmits } from 'vue';
 
-const props = defineProps({
+defineProps({
   isOpen: Boolean,
-  project: Object,
 });
 
 const emit = defineEmits(['close']);
@@ -18,54 +17,36 @@ const handleBackdropClick = (e) => {
 <template>
   <div
     v-if="isOpen"
-    class="modal-overlay fixed inset-0 bg-slate-900/90 backdrop-blur-sm z-[100] flex items-center justify-center p-6"
+    class="modal-overlay fixed inset-0 bg-slate-900/90 dark:bg-slate-950/95 backdrop-blur-sm z-[100] flex items-center justify-center p-4 transition-colors duration-300 overflow-y-auto"
     @click="handleBackdropClick"
   >
-    <div class="bg-white w-full max-w-4xl rounded-[2.5rem] overflow-hidden shadow-2xl relative flex flex-col md:flex-row animate-in">
+    <div class="bg-white dark:bg-slate-900 w-full max-w-4xl md:max-w-6xl rounded-[2.5rem] overflow-hidden shadow-2xl dark:shadow-slate-800 relative flex flex-col md:flex-row animate-in transition-colors duration-300 my-auto max-h-[90vh]">
       <!-- Botão fechar -->
       <button
         @click="$emit('close')"
-        class="absolute top-6 right-6 w-12 h-12 bg-slate-100 rounded-full hover:bg-slate-200 z-10 flex items-center justify-center border-none cursor-pointer transition-colors"
+        class="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 md:w-12 md:h-12 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 z-10 flex items-center justify-center border-none cursor-pointer transition-colors duration-300"
       >
-        <i class="fas fa-times text-slate-800"></i>
+        <i class="fas fa-times text-slate-800 dark:text-slate-200 text-sm md:text-base"></i>
       </button>
 
       <!-- Imagem -->
-      <div class="md:w-1/2">
-        <img
-          v-if="project"
-          :src="project.image"
-          :alt="project.title"
-          class="w-full h-full object-cover"
-        />
+      <div class="md:w-[58%] md:aspect-[5/4] w-full h-48 md:h-auto flex-shrink-0">
+        <slot name="image" />
       </div>
 
       <!-- Conteúdo -->
-      <div class="p-10 md:w-1/2 flex flex-col justify-center">
-        <span v-if="project" class="text-blue-600 font-bold text-sm mb-4">
-          {{ project.date }}
-        </span>
-        <h3 v-if="project" class="text-4xl font-extrabold text-slate-900 mb-6">
-          {{ project.title }}
-        </h3>
-        <p v-if="project" class="text-slate-600 text-lg mb-8 leading-relaxed">
-          {{ project.description }}
-        </p>
-        <div v-if="project && project.technologies" class="flex items-center gap-6 flex-wrap">
-          <span
-            v-for="(tech, index) in project.technologies"
-            :key="index"
-            class="text-blue-500 font-semibold text-sm bg-blue-50 px-4 py-2 rounded-lg"
-          >
-            {{ tech }}
-          </span>
-        </div>
+      <div class="p-6 md:p-10 md:w-[42%] w-full flex flex-col justify-center overflow-y-auto max-h-[calc(90vh-12rem)] md:max-h-none">
+        <slot name="content" />
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.modal-overlay {
+  height: 100dvh;
+}
+
 .animate-in {
   animation: slideIn 0.3s ease-out;
 }
@@ -78,6 +59,12 @@ const handleBackdropClick = (e) => {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 1rem;
   }
 }
 </style>
