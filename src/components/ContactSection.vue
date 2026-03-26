@@ -48,11 +48,74 @@ const currentYear = computed(() => new Date().getFullYear());
         </div>
       </div>
 
-      <!-- Seção direita - Ícone de Código Animado -->
-      <div class="hidden md:flex items-center justify-center h-full" data-aos="fade-left">
-        <div class="code-icon-container">
-          <i class="fas fa-code" style="font-size: 180px;"></i>
-        </div>
+      <!-- Seção direita - Formulário de Contato -->
+      <div class="w-full" data-aos="fade-left">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="w-full rounded-[2rem] bg-white/10 dark:bg-white/10 backdrop-blur-sm border border-white/20 p-6 md:p-8 shadow-2xl"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="c5fdd428-d917-45b8-90b7-d1241c639c14"
+          />
+
+          <input type="hidden" name="subject" value="Novo contato do portfólio" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+          <div class="space-y-5">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-slate-200 mb-2">
+                Nome
+              </label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                required
+                placeholder="Seu nome"
+                class="w-full rounded-xl bg-white/90 text-slate-900 placeholder:text-slate-500 px-4 py-3 outline-none border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition-all duration-300"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold text-slate-200 mb-2">
+                E-mail
+              </label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                required
+                placeholder="voce@email.com"
+                class="w-full rounded-xl bg-white/90 text-slate-900 placeholder:text-slate-500 px-4 py-3 outline-none border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition-all duration-300"
+              />
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-semibold text-slate-200 mb-2">
+                Mensagem
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                placeholder="Me conte sobre seu projeto..."
+                class="w-full rounded-xl bg-white/90 text-slate-900 placeholder:text-slate-500 px-4 py-3 outline-none border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition-all duration-300 resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-400 hover:to-blue-600 text-white rounded-xl font-bold shadow-lg shadow-blue-900/30 hover:scale-[1.01] transition-all duration-300"
+            >
+              <i class="fas fa-paper-plane"></i>
+              Enviar mensagem
+            </button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -63,28 +126,3 @@ const currentYear = computed(() => new Date().getFullYear());
   </section>
 </template>
 
-<style scoped>
-.code-icon-container {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  animation: float 3s ease-in-out infinite;
-}
-
-.code-icon-container i {
-  color: white;
-  text-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
-  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3));
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-30px);
-  }
-}
-
-</style>
