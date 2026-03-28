@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://alison4kk.github.io/portifolio/sitemap.xml
