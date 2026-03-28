@@ -1,6 +1,7 @@
 <script setup>
 import ProjectCard from './ProjectCard.vue';
 import fastproteseImage from '../assets/projetos/fastprotese.png';
+import itemsImage from '../assets/projetos/items.png';
 </script>
 
 <template>
@@ -26,6 +27,21 @@ import fastproteseImage from '../assets/projetos/fastprotese.png';
               <li>Multi-tenant single-database</li>
               <li>Hospedagem em ambiente Linux</li>
             </ul>
+          </template>
+        </ProjectCard>
+       <ProjectCard
+          title="Items"
+          :technologies="['PHP']"
+          :image="itemsImage"
+          date="2026"
+          link="https://alison4kk.github.io/Items/"
+          :icons="['fab fa-php']"
+          :aos-delay="0"
+        >
+          <template #description>
+            <p class="mb-3">
+              Biblioteca PHP para manipulação de arrays de itens (array associativo ou objeto).
+            </p>
           </template>
         </ProjectCard>
       </div>
