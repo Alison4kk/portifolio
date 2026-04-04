@@ -2,6 +2,7 @@
 import ProjectCard from './ProjectCard.vue';
 import fastproteseImage from '../assets/projetos/fastprotese.png';
 import itemsImage from '../assets/projetos/items.png';
+import tableBuilderImage from '../assets/projetos/table-builder.png';
 </script>
 
 <template>
@@ -41,6 +42,21 @@ import itemsImage from '../assets/projetos/items.png';
           <template #description>
             <p class="mb-3">
               Biblioteca PHP para manipulação de arrays de itens (array associativo ou objeto).
+            </p>
+          </template>
+        </ProjectCard>
+       <ProjectCard
+          title="TableBuilder"
+          :technologies="['PHP']"
+          :image="tableBuilderImage"
+          date="2026"
+          link="https://alison4kk.github.io/table-builder/"
+          :icons="['fab fa-php']"
+          :aos-delay="0"
+        >
+          <template #description>
+            <p class="mb-3">
+              Biblioteca PHP para auxiliar na construção de tabelas HTML a partir de arrays de dados. Inspirado em bibliotecas de componentes reativas, mas focado em renderização server-side e PHP puro.
             </p>
           </template>
         </ProjectCard>
